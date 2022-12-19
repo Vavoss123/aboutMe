@@ -131,8 +131,3 @@ table, th, td {
     width: 414px;
   }
 }
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
