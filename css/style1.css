@@ -4,91 +4,95 @@ body {
 }
 table, th, td {
   padding: 0px;
-  width:100%;
+  width:100vh;
   border-collapse: collapse;
 }
-#parent {
-  width: 100%;
-  height: 900px;
+* {box-sizing: border-box;}
+.mySlides {
+  display: none;
+}
+.slide-bg{
   background-image: url(../image/pic1.png);
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin-bottom: 10px;
+  width: 1470px;
+  margin-top: 0px;
 }
-#childWrapper {
-  list-style: none;
-  width: 2940px;
-  height: 800px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+/* Slideshow container */
+.slideshow-container {
+  width: 1450px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 20px;
 }
-#childWrapper > li {
-  float: left;
-  width: 1467px;
-  height: 80px;
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.text{
+  background-color: white;
 }
 .text1{
-  background-color: white;
   font-size: 2em;
-}
-.text2{
-  background-color: white;
-  padding-left:170px;
-  padding-right:170px;
-  font-size: 1.9em;
-}
-.name1{
+  margin: 0;
   text-align: center;
 }
-.name2{
-text-align: center;
+.text2{
+  text-align: center;
+  padding-left:170px;
+  padding-right:170px;
+  padding-bottom:20px;
+  font-size: 1.5em;
 }
 .intro{
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100%;
-  background-color: RGBA(255,255,255, 0.9);
+  width: 1470px;
+  background-color: RGBA(255,255,255, 1);
   text-align: center;
   margin-bottom: 5px;
   font-size: 2.5em;
 }
 .First{
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
   text-align: center;
   display: inline-block;
-  width: 1300px;
+  width: 1430px;
   background-color: RGBA(235, 77, 77, 0.9);
   height: 100vh;
   padding: 5%;
   font-size: 2.3em;
 }
 .Second{
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
   text-align: center;
   display: inline-block;
-  width: 1300px;
+  width: 1430px;
   background-color: RGBA(204,52,4, 0.9);
   height: 100vh;
   padding: 5%;
   font-size: 2.3em;
 }
-.third{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  background-color: RGBA(255,255,255, 0.9);
-  text-align: center;
-  margin-bottom: 5%;
-  font-size: 2.5em;
-}
 .navbar {
+  z-index: 3;
   overflow: hidden;
   background-color: #333;
   position: fixed;
@@ -104,6 +108,28 @@ text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+@media all screen and (max-width: 500px) {
+  .slideshow-container{
+    width: 394px;
+  }
+  .slide-bg{
+    width: 414px;
+  }
+  .First{
+    width: 374px;
+  }
+  .second{
+    width: 374px;
+  }
+  table, th, td {
+    width: 414px;
+  }
 }
 
 .navbar a:hover {
